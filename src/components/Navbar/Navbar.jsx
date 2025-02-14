@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
-=======
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
->>>>>>> origin/main
 
 const Navbar = () => {
   // State for menu visibility
@@ -19,15 +13,9 @@ const Navbar = () => {
   return (
     <React.Fragment>
       <nav className="relative px-4 py-4 flex justify-between items-center bg-[#F0EAE6]">
-<<<<<<< HEAD
-      <Link className="text-3xl leading-none" to="/SkinSolution">
-  Imagex
-</Link>
-=======
         <NavLink to="/" className="text-3xl leading-none" activeClassName="text-blue-500">
           Imagex
         </NavLink>
->>>>>>> origin/main
         <div className="lg:hidden">
           <button
             className="navbar-burger flex items-center text-black-600 p-3"
@@ -48,32 +36,44 @@ const Navbar = () => {
             isMenuHidden ? 'hidden' : ''
           }`}
         >
-           <li className="mb-1">
-                <Link
-                  to="/shop-all"
-                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-black-600 rounded"
-                >
-                  SHOP ALL
-                </Link>
-              </li>
-
+          <li className="mb-1">
+            <NavLink
+              to="/shop-all"
+              className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-black-600 rounded"
+              activeClassName="text-blue-500"
+            >
+              SHOP ALL
+            </NavLink>
+          </li>
           <li className="text-gray-300"></li>
           <li>
-            <a className="text-md text-gray-400 hover:text-gray-500" href="#">
+            <NavLink
+              to="/our-story"
+              className="text-md text-gray-400 hover:text-gray-500"
+              activeClassName="text-blue-500"
+            >
               OUR STORY
-            </a>
+            </NavLink>
           </li>
           <li className="text-gray-300"></li>
           <li>
-            <a className="text-md text-gray-400 hover:text-gray-500" href="#">
+            <NavLink
+              to="/blog"
+              className="text-md text-gray-400 hover:text-gray-500"
+              activeClassName="text-blue-500"
+            >
               BLOG
-            </a>
+            </NavLink>
           </li>
           <li className="text-gray-300"></li>
           <li>
-            <a className="text-md text-gray-400 hover:text-gray-500" href="#">
+            <NavLink
+              to="/help"
+              className="text-md text-gray-400 hover:text-gray-500"
+              activeClassName="text-blue-500"
+            >
               HELP
-            </a>
+            </NavLink>
           </li>
           <li className="text-gray-300"></li>
         </ul>
@@ -110,24 +110,40 @@ const Navbar = () => {
           <div>
             <ul>
               <li className="mb-1">
-                <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-black-600 rounded" href="#">
+                <NavLink
+                  to="/shop-all"
+                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-black-600 rounded"
+                  activeClassName="text-blue-500"
+                >
                   SHOP ALL
-                </a>
+                </NavLink>
               </li>
               <li className="mb-1">
-                <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-black-600 rounded" href="#">
+                <NavLink
+                  to="/our-story"
+                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-black-600 rounded"
+                  activeClassName="text-blue-500"
+                >
                   OUR STORY
-                </a>
+                </NavLink>
               </li>
               <li className="mb-1">
-                <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-black-600 rounded" href="#">
+                <NavLink
+                  to="/blog"
+                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-black-600 rounded"
+                  activeClassName="text-blue-500"
+                >
                   BLOG
-                </a>
+                </NavLink>
               </li>
               <li className="mb-1">
-                <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-black-600 rounded" href="#">
+                <NavLink
+                  to="/help"
+                  className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-black-600 rounded"
+                  activeClassName="text-blue-500"
+                >
                   HELP
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
